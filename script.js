@@ -3,7 +3,7 @@ let timerDisplay = document.gutElementById("timer");
 
 let currentDate = new Date();
 
-setInterval(){
+setInterval{
 	function(){
 		currentDate = new Date();
 		timerDisplay.innerHTML = currentDate.toLocalString
