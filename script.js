@@ -1,11 +1,18 @@
-//your JS code here. If required.
-let timerDisplay = document.gutElementById("timer");
+function updateTime() {
+    const timerElement = document.getElementById("timer");
 
-let currentDate = new Date();
+    const currentDate = new Date();
+    const options = {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+    };
+    const formattedDate = currentDate.toLocaleDateString('en-US', options);
 
-setInterval{
-	function(){
-		currentDate = new Date();
-		timerDisplay.innerHTML = currentDate.toLocalString
-	},1000
+    timerElement.innerHTML = formattedDate;
 }
+
+// Update the timer every second
+setInterval(updateTime, 1000);
+
+// Call the function immediately to avoid initial delay
+updateTime();
